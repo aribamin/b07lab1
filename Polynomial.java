@@ -13,7 +13,7 @@ public class Polynomial{
     }
 
     public Polynomial add (Polynomial p){
-        double[] result_coefficients = new double[p.coefficients.length];
+        double[] result_coefficients = new double[this.coefficients.length];
         for (int i = 0; i < this.coefficients.length; i++){
             result_coefficients[i] = result_coefficients[i] + this.coefficients[i];
         }
