@@ -1,24 +1,27 @@
 public class Polynomial{
-    double[] coefficients;
+    private double[] coefficients;
 
     public Polynomial() {
-        coefficients = new double[]{0}
+        coefficients = new double[]{0};
     }
 
     public Polynomial (double[] array){
-        coefficients = new double[array.length]
+        coefficients = new double[array.length];
         for (int i = 0; i < array.length; i++){
             coefficients[i] = array[i];
         }
     }
 
     public Polynomial add (Polynomial p){
-        double[] result_coefficients = coefficients;
+        double[] result_coefficients = new double[this.coefficients.length];
         for (int i = 0; i < this.coefficients.length; i++){
             result_coefficients[i] = result_coefficients[i] + this.coefficients[i];
         }
-        Polynomial p1 = new Polynomial(new_coefficients);
-        return p;
+        for (int i = 0; i < p.coefficients.length; i++){
+            result_coefficients[i] += p.coefficients[i];
+        }
+        Polynomial result_p = new Polynomial(result_coefficients);
+        return result_p;
     } 
 
     public double evaluate (double x){
