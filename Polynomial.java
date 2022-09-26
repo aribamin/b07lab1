@@ -33,6 +33,6 @@ public class Polynomial{
     }
 
     public boolean hasRoot (double x){
-        return this.evaluate(value) == 0;
+        return this.evaluate(x) == 0;
     }
 }
